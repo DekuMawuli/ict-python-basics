@@ -12,11 +12,41 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            overflow: hidden;
-            height: 100vh;
-        }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    overflow: hidden;
+    height: 100vh;
+    position: relative; /* Required for absolute positioned children */
+}
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: 
+            linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.08) 0%,    /* brighter bars   */
+                rgba(255, 255, 255, 0.18) 25%,
+                rgba(255, 255, 255, 0.08) 50%,
+                rgba(255, 255, 255, 0.18) 75%,
+                rgba(255, 255, 255, 0.08) 100%
+            );
+        background-size: 400% 400%;          /* wider travel */
+        animation: shimmer 12s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes shimmer {
+        0%   { background-position: 0%   50%; }
+        50%  { background-position: 100% 50%; }
+        100% { background-position: 0%   50%; }
+    }
+
+    li {
+        list-style: none;
+    }
 
         .presentation-container {
             position: relative;
@@ -272,7 +302,7 @@
         }
 
         .highlight {
-            color: #ffd700;
+            color: #0052a3;
             font-weight: bold;
         }
 
@@ -406,6 +436,27 @@
             animation: fadeIn 0.5s ease;
         }
 
+        .pulse-btn{
+            display:inline-block;
+            padding:12px 28px;
+            background:#0066cc;
+            color:#fff;
+            border-radius:50px;
+            font-weight:bold;
+            text-decoration:none;
+            box-shadow:0 0 0 0 rgba(0,102,204,.7);
+            animation:pulse 2s infinite;
+            transition:background .3s;
+        }
+        .pulse-btn:hover{
+            background:#0052a3;
+        }
+        @keyframes pulse{
+            0%   { box-shadow:0 0 0 0 rgba(0,102,204,.7); }
+            70%  { box-shadow:0 0 0 12px rgba(0,102,204,0); }
+            100% { box-shadow:0 0 0 0 rgba(0,102,204,0); }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -484,7 +535,11 @@ python --version  # Check installation</pre></div>
                 <div class="ide-icon">📊</div>
             </div>
             <ul>
-                <li><span class="highlight">VS Code:</span> Lightweight, powerful editor with Python extensions</li>
+                <li><span class="highlight">VS Code:</span> Lightweight, powerful editor with Python extensions 
+                    <a href="https://code.visualstudio.com/download" target="_blank" class="pulse-btn">
+                        Download VS Code
+                    </a>
+                </li>
                 <li><span class="highlight">PyCharm:</span> Full-featured IDE with advanced debugging</li>
                 <li><span class="highlight">Jupyter Notebook:</span> Interactive environment for data science</li>
             </ul>
