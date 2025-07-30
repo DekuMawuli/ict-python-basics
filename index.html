@@ -494,6 +494,7 @@ python --version  # Check installation</pre></div>
         <div class="slide">
             <h2>Python Syntax & Variables</h2>
             <p>Python emphasizes readability and simplicity</p>
+            <p style="font-size:1.1em; margin-top:-10px;">Think of them as sticky labels you slap on jars in the kitchen so you remember what’s inside.</p>
             
             <div class="code-block"><pre># This is a comment
 print("Hello, World!")  # Output text
@@ -515,6 +516,13 @@ is_student = True      # Boolean</pre></div>
         <!-- Slide 4: Data Types -->
         <div class="slide">
             <h2>Data Types</h2>
+            <ul style="font-size:1.1em; margin-top:-8px;">
+		  <li>String = the text you text your friend.</li>
+		  <li>Integer = the exact number of candies you just counted.</li>
+		  <li>Float = the price tag that says $3.99.</li>
+		  <li>Boolean = the light switch—only ON or OFF.</li>
+		  <li>None = an empty lunchbox.</li>
+		</ul>
             <div class="data-types">
                 <div class="data-type">
                     <h3>🔤 String</h3>
@@ -541,6 +549,7 @@ is_false = False</pre></div>
         <!-- Slide 5: Operators -->
         <div class="slide">
             <h2>Operators & Expressions</h2>
+            <p style="font-size:1.1em; margin-top:-10px;">Same buttons you mash on a pocket calculator, but Python does the heavy lifting.</p>
             
             <div class="code-block"><pre># Arithmetic Operators
 result = 10 + 5    # Addition: 15
@@ -561,6 +570,7 @@ result = 2 ** 3    # Exponentiation: 8
         <!-- Slide 6: Control Flow - If Statements -->
         <div class="slide">
             <h2>Control Flow: If Statements</h2>
+            <p style="font-size:1.1em; margin-top:-10px;">Like deciding what to wear: if it’s cold → jacket, elif it’s warm → t-shirt, else → stay home.</p>
             
             <div class="code-block"><pre># Basic if statement
 age = 18
@@ -589,6 +599,7 @@ elif temperature < 10 or temperature > 40:
         <!-- Slide 7: Loops - For Loop -->
         <div class="slide">
             <h2>Loops: For Loop</h2>
+            <p style="font-size:1.1em; margin-top:-10px;">Like going through every item on your grocery list and dropping it into the cart one by one.</p>
             
             <div class="code-block"><pre># Basic for loop
 for i in range(5):
@@ -611,6 +622,7 @@ for index, fruit in enumerate(fruits):
         <!-- Slide 8: Loops - While Loop -->
         <div class="slide">
             <h2>Loops: While Loop</h2>
+            <p style="font-size:1.1em; margin-top:-10px;">Like repeatedly checking your phone while waiting for the pizza tracker to say “Out for delivery.”</p>
             <p><em>Note: Python doesn't have a do-while loop, but we can simulate it</em></p>
             
             <div class="code-block"><pre># Basic while loop
@@ -636,6 +648,7 @@ while True:
         <!-- Slide 9: Functions -->
         <div class="slide">
             <h2>Functions</h2>
+            <p style="font-size:1.1em; margin-top:-10px;">Your personal recipe: give it ingredients, it always bakes the same cake.</p>
             
             <div class="code-block"><pre># Basic function
 def greet(name):
@@ -662,6 +675,7 @@ print(f"Area: {area}")  # Output: Area: 15</pre></div>
         <div class="slide">
             <h2>Lists</h2>
             <p>Ordered, mutable collections of items</p>
+            <p style="font-size:1.1em; margin-top:-10px;">The scribbled sheet you carry to the market—you can add, cross off, or swap items anytime.</p>
             
             <div class="code-block"><pre># Creating lists
 fruits = ["apple", "banana", "orange"]
@@ -686,6 +700,10 @@ squares = [x**2 for x in range(1, 6)]  # [1, 4, 9, 16, 25]</pre></div>
         <!-- Slide 11: Tuples, Sets -->
         <div class="slide">
             <h2>Tuples & Sets</h2>
+            <ul style="font-size:1.1em; margin-top:-8px;">
+  <li>Tuple = the sealed meal-deal you can’t change once it’s handed to you.</li>
+  <li>Set = a jar of unique buttons—no duplicates allowed.</li>
+</ul>
             
             <div class="code-block"><pre># Tuples - immutable ordered collections
 coordinates = (10, 20)
@@ -707,6 +725,32 @@ union = set1 | set2         # {1, 2, 3, 4, 5, 6}
 intersection = set1 & set2  # {3, 4}
 difference = set1 - set2    # {1, 2}</pre></div>
         </div>
+        
+        <!-- Slide 12: Dictionaries -->
+<div class="slide">
+    <h2>Dictionaries</h2>
+    <p>Key-value pairs—like a real word dictionary, but you write the definitions.</p>
+    
+    <div class="code-block"><pre># Creating a dictionary
+person = {"name": "Alice", "age": 25, "job": "Engineer"}
+
+# Accessing values
+print(person["name"])  # Alice
+print(person.get("salary", "Not specified"))  # Safe lookup
+
+# Adding/updating
+person["city"] = "New York"
+person["age"] = 26
+
+# Looping
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+# Dictionary comprehension
+squares = {x: x**2 for x in range(1, 6)}  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}</pre></div>
+    
+    <p style="font-size:1.1em; margin-top:-10px;">Think of it as your phone’s contact list: each name (key) maps to one phone number (value).</p>
+</div>
 
         <!-- Slide 13: Quiz Introduction -->
         <div class="slide">
