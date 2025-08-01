@@ -10,15 +10,19 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html {
+            height: 100%;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             color: #333;
             line-height: 1.6;
             overflow: hidden;
             height: 100vh;
             position: fixed;
             width: 100%;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
         }
         .slide {
             width: 90%;
@@ -26,12 +30,13 @@
             height: 100vh;
             margin: 0 auto;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             display: none;
             overflow-y: auto;
             position: relative;
+            backdrop-filter: blur(5px);
         }
         .slide.active {
             display: block;
