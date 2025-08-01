@@ -15,11 +15,15 @@
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             color: #333;
             line-height: 1.6;
+            overflow: hidden;
+            height: 100vh;
+            position: fixed;
+            width: 100%;
         }
         .slide {
             width: 90%;
             max-width: 1200px;
-            min-height: 100vh;
+            height: 100vh;
             margin: 0 auto;
             padding: 40px;
             background: rgba(255, 255, 255, 0.95);
@@ -27,6 +31,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             display: none;
             overflow-y: auto;
+            position: relative;
         }
         .slide.active {
             display: block;
@@ -378,6 +383,52 @@
             color: #856404;
             margin-bottom: 15px;
         }
+
+        /* VS Code Download Button Styles */
+        .vscode-download-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .vscode-download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #007acc, #005a9e);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 122, 204, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            border: none;
+            cursor: pointer;
+        }
+        .vscode-download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 122, 204, 0.6);
+            animation: none;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 122, 204, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(0, 122, 204, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 122, 204, 0);
+            }
+        }
+        .vscode-icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTQzLjEgMTY3LjhsLTQ1LjktNDUuOWMtMS4yLTEuMi0yLjktMS44LTQuNi0xLjhoLTUuOGMtMS43IDAtMy40LjYtNC42IDEuOEwzNS44IDE2Ny44Yy0xLjIgMS4yLTEuOCAyLjktMS44IDQuNnY1LjhjMCAxLjcuNiAzLjQgMS44IDQuNiAxLjhsNDUuOSA0NS45YzEuMiAxLjIgMi45IDEuOCA0LjYgMS44aDUuOGMxLjcgMCAzLjQtLjYgNC42LTEuOGw0NS45LTQ1LjljMS4yLTEuMiAxLjgtMi45IDEuOC00LjZ2LTUuOGMwLTEuNy0uNi0zLjQtMS44LTQuNnpNMTI4IDQ0LjZjNDYuMSAwIDgzLjUgMzcuNCA4My41IDgzLjVzLTM3LjQgODMuNS04My41IDgzLjUtODMuNS0zNy40LTgzLjUtODMuNSAzNy40LTgzLjUgODMuNXoiLz48L3N2Zz4=') no-repeat center;
+            background-size: contain;
+        }
     </style>
 </head>
 <body>
@@ -455,6 +506,13 @@ python --version</pre>
                         <li>Extensions for teaching</li>
                         <li>Git integration for version control</li>
                     </ul>
+                    
+                    <div class="vscode-download-container">
+                        <a href="https://code.visualstudio.com/download" target="_blank" class="vscode-download-btn">
+                            <span class="vscode-icon"></span>
+                            Download VS Code
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="example-box">
